@@ -1,10 +1,10 @@
 {
   "name": "godjira-wrapper",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "JIRA REST API wrapper for node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jira.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/tamarasaurus/godjira-wrapper",
   "dependencies": {
+    "string": "^1.9.0",
     "underscore": "^1.6.0"
   }
 }
