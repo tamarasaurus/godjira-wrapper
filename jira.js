@@ -6,5 +6,10 @@ jira = new Jira({
     host: ''
 });
 
-console.log(jira);
-jira.getProjects();
+jira.getProject('OPEN', function(e, res){
+    console.log(e, res);
+});
+
+jira.getUserIssues('tamara.chahine', {startAt: 0}, function(e, res){
+    console.log(e, res);
+});

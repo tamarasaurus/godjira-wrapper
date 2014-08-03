@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/tamarasaurus/godjira-wrapper/issues"
   },
-  "homepage": "https://github.com/tamarasaurus/godjira-wrapper"
+  "homepage": "https://github.com/tamarasaurus/godjira-wrapper",
+  "dependencies": {
+    "underscore": "^1.6.0"
+  }
 }
