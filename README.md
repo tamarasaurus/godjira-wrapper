@@ -7,36 +7,35 @@ reference
 ===============
 
 ```javascript
+var Jira = require('./index'),
 
-    var Jira = require('./index'),
+jira = new Jira({
+    user: '', //jira username
+    pass: '', //password
+    host: '', //your jira host/instance
+    project: {
+        key: '', //the project key
+        name: '' //the project name
+    }
+});
 
-    jira = new Jira({
-        user: '', //jira username
-        pass: '', //password
-        host: '', //your jira host/instance
-        project: {
-            key: '', //the project key
-            name: '' //the project name
-        }
-    });
+// Get a project
+jira.getProject(_projectkey_, function(e, res){});
 
-    // Get a project
-    jira.getProject(_projectkey_, function(e, res){});
+//Get issues for a user
+jira.getUserIssues(_jira username_, {startAt: 0}, function(e, res){});
 
-    //Get issues for a user
-    jira.getUserIssues(_jira username_, {startAt: 0}, function(e, res){});
+//Get an issue
+jira.getIssue(_issue_number_, function(e, res){ });
 
-    //Get an issue
-    jira.getIssue(_issue_number_, function(e, res){ });
+//Get rapidviews for the host
+jira.getRapidViews(function(e, res){});
 
-    //Get rapidviews for the host
-    jira.getRapidViews(function(e, res){});
+//Get the latest sprint for project specified in the options
+jira.getLatestSprint(function(e, res){ });
 
-    //Get the latest sprint for project specified in the options
-    jira.getLatestSprint(function(e, res){ });
-
-    //Get details of a particular rapidview
-    jira.getRapidView('121', function(e, res){});
+//Get details of a particular rapidview
+jira.getRapidView('121', function(e, res){});
 
 ```
 
